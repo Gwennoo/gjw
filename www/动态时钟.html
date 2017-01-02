@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>动态时钟</title>
+</head>
+<body onload="abc()">
+<div id="d1"></div>
+	<script>
+		 function abc(){
+		 var myDate=new Date();
+		 var hours=myDate.getHours();
+		 var m=myDate.getMinutes();
+		 var s=myDate.getSeconds();
+		 var d1=document.getElementById('d1');
+		 var time="现在时间："+hours+":"+m+":"+s;
+		 d1.innerHTML=time;
+		 setTimeout("abc()",1000);
+		 }
+		
+	</script>
+</body>
+</html>

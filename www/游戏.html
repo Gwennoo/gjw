@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>游戏</title>
+</head>
+<body>
+	<input type="text" id="i1" onchange="abc()">
+	<div id="d1"></div>
+	<script>
+	function abc()
+	{
+		var i1=document.getElementById('i1').value;
+		if(i1<=20 && i1>=1)
+		{
+			d1.innerHTML="10分";
+		}
+		else if(i1<=30 && i1>=1)
+		{
+			d1.innerHTML="10分";
+		}
+		else if(i1<=40 && i1>=1)
+		{
+			d1.innerHTML="20分";
+		}
+		else if(i1<=49 && i1>=1)
+		{
+			d1.innerHTML="30分";
+		}
+		else if(i1==50){
+			d1.innerHTML="100分";
+		}
+		else
+		{
+			alert("输入错误！");
+			window.location="游戏.html";
+		}
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小广告</title>
+	<script src="./jquery-3.1.1.js"></script>
+	<style>
+		body{
+			margin:0px;
+			padding: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div id="d1" style="position: absolute;width: 50px;height: 50px;background: black;"></div>
+	<script>
+	$(function(){
+		var x=10;
+		var y=10;
+		var shuiping=true;
+		var chuizhi=true;
+        setInterval(function(){
+        	var zuo=0;
+			var shang=0;
+			var you=$(window).width()-50;
+			var xia=$(window).height()-50;				
+			$("#d1").css({"left":x,"top":y});
+	     	
+	     	if(shuiping==true)
+			{
+				x+=1;
+			}
+			else
+			{
+				x-=1;
+			}
+			
+			if(chuizhi==true)
+			{
+				y+=1;
+			}
+			else
+			{
+				y-=1;
+			}
+			
+			if(x<zuo)
+			{
+				shuiping=true;
+			}
+			
+			if(x>you)
+			{
+				shuiping=false;		
+			}
+			
+			if(y<shang)
+			{
+				chuizhi=true;
+			}
+			if(y>xia)
+			{
+				chuizhi=false;
+			}
+        }, 3);                               
+                                  
+		
+	});
+	</script>
+</body>
+</html>
