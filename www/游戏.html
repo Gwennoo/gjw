@@ -11,30 +11,33 @@
 	function abc()
 	{
 		var i1=document.getElementById('i1').value;
-		if(i1<=20 && i1>=1)
+		var sum=0;
+		if(i1>=1 && i1<=50)
 		{
-			d1.innerHTML="10分";
+			for(var x=1;x<=i1;x++)
+			{
+				if(x<=30)
+				{
+					sum+=10;
+				}
+				else if(x<=40)
+				{
+					sum+=20;
+				}
+				else if(x<=49)
+				{
+					sum+=30;
+				}
+				else
+				{
+					sum+=100;
+				}
+			}
 		}
-		else if(i1<=30 && i1>=1)
-		{
-			d1.innerHTML="10分";
+		else{
+			d1.innerHTML="没有此关卡";
 		}
-		else if(i1<=40 && i1>=1)
-		{
-			d1.innerHTML="20分";
-		}
-		else if(i1<=49 && i1>=1)
-		{
-			d1.innerHTML="30分";
-		}
-		else if(i1==50){
-			d1.innerHTML="100分";
-		}
-		else
-		{
-			alert("输入错误！");
-			window.location="游戏.html";
-		}
+		alert(sum);
 	}
 	</script>
 </body>
